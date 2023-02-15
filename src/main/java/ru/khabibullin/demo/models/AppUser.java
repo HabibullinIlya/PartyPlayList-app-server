@@ -2,7 +2,8 @@ package ru.khabibullin.demo.models;
 
 import jakarta.persistence.*;
 
-@Entity(name = "AppUser")
+@Entity(name = "appuser")
+@Table
 public class AppUser {
 
     @Id

@@ -40,6 +40,12 @@ public class SecurityConfig {
                 .requestMatchers("/test").hasRole("USER")
                 .requestMatchers("/", "/**").permitAll()
                 .and()
+                .formLogin()
+                .defaultSuccessUrl("/test")
+                .and()
+                .logout()
+                .logoutSuccessUrl("/")
+                .and()
                 .build();
     }
 }

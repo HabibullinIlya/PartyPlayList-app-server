@@ -21,15 +21,15 @@ public class RegistrationController {
 
 
     @GetMapping("/registration")
-    public String registrationForm(@ModelAttribute AppUser user) {
+    public String registrationForm(@ModelAttribute  RegistrationForm registrationForm) {
         return "registration";
     }
 
 
-    @PostMapping("/regisrtration")
+    @PostMapping("/registration")
     public String registration(@ModelAttribute RegistrationForm registrationForm) {
         userRepository.save(registrationForm.toUser(passwordEncoder));
-        return "test";
+        return "redirect:/test2";
     }
 
 }
